@@ -4,6 +4,8 @@ diff命令的格式大致形式为 diff [arguement] [from_file] [to_file]，这�
 
 ======================================================
 from_file:
+
+```
 The Way that can be told of is not the eternal Way;
 The name that can be named is not the eternal name.
 The Nameless is the origin of Heaven and Earth;
@@ -15,8 +17,11 @@ And let there always be being,
 The two are the same,
 But after they are produced,
   they have different names.
+```
 
 to_file:
+
+```
 The Nameless is the origin of Heaven and Earth;
 The named is the mother of all things.
 
@@ -30,14 +35,16 @@ But after they are produced,
 They both may be called deep and profound.
 Deeper and more profound,
 The door of all subtleties!
+```
 
 ======================================================
-context格式：
+**context格式：**
 执行命令 diff -C 1 from_file to_file
 
 patch：
-*** lao	2002-02-21 23:30:39.942229878 -0800
---- tzu	2002-02-21 23:30:50.442260588 -0800
+```
+*** from_file 2002-02-21 23:30:39.942229878 -0800
+--- to_file	2002-02-21 23:30:50.442260588 -0800
 ***************
 *** 1,5 ****
 - The Way that can be told of is not the eternal Way;
@@ -57,10 +64,11 @@ patch：
 + They both may be called deep and profound.
 + Deeper and more profound,
 + The door of all subtleties!
+```
 
 其中：
-*表示from_file，-表示to_file
-*** number1，number2 ***表示from_file的number1行到number2行
+`*表示from_file，-表示to_file`
+`***number1，number2 ***`表示from_file的number1行到number2行
 --- number1，number2 ---表示to_file的number1行到number2行
 
 每一行前面的字符一共三种：
@@ -70,12 +78,14 @@ patch：
 [+]表示to_file存在但是from_file没有
 
 ======================================================
-unified format格式：
+**unified format格式：**
 执行命令 diff -u  from_file to_file
 
-patch：
---- lao	2002-02-21 23:30:39.942229878 -0800
-+++ tzu	2002-02-21 23:30:50.442260588 -0800
+patch：+The door of all subtleties!
+
+```
+--- from_file 2002-02-21 23:30:39.942229878 -0800
++++ to_file	2002-02-21 23:30:50.442260588 -0800
 @@ -1,7 +1,6 @@
 -The Way that can be told of is not the eternal Way;
 -The name that can be named is not the eternal name.
@@ -93,6 +103,7 @@ patch：
 +They both may be called deep and profound.
 +Deeper and more profound,
 +The door of all subtleties!
+```
 
 其中：
 @@ -1,7 +1,6 @@

@@ -81,7 +81,7 @@ patch：
 **unified format格式：**
 执行命令 diff -u  from_file to_file
 
-patch：、
+patch：
 
 ```
 --- from_file 2002-02-21 23:30:39.942229878 -0800
